@@ -11,7 +11,7 @@ The Facebook module is used for connecting your application with Facebook. This 
 
 ## Getting Started
 
-Note that the min SDK for this module is 5.0.0.GA and later. You do not need to download or unpack it.
+Note that this module requires Titanium SDK 11.0.0+ (iOS) / 12.7.0+ (Android). You do not need to download or unpack it.
 Edit the modules section of your tiapp.xml file to include this module:
 ```xml
 <modules>
