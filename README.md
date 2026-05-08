@@ -14,7 +14,7 @@ The Facebook module is used for connecting your application with Facebook. This 
 ### v16.0.0 (iOS) — Facebook iOS SDK 18.0.3, Titanium SDK 13.2.0
 
 - **Minimum iOS deployment target raised to 15.0** (was 12.0). Consumers must target iOS 15+ in their `tiapp.xml` / `Info.plist`.
-- **Minimum Titanium SDK raised to 13.2.0** (was 11.0.0). The module now links against Ti 13.x's `TitaniumKit.xcframework`; older Titanium SDKs are no longer supported.
+- **Minimum Titanium SDK raised to 13.0.0** (was 11.0.0). The module now links against Ti 13.x's `TitaniumKit.xcframework`; older Titanium SDKs are no longer supported.
 - Underlying Facebook iOS SDK bumped from 17.4.0 to 18.0.3 (additive: improved StoreKit / IAP event support, fast-app-switching reintroduced, deferred-deeplink improvements). Upstream changelog: https://github.com/facebook/facebook-ios-sdk/blob/main/CHANGELOG.md
 
 ### v15.0.0 (Android) — Facebook Android SDK 18.2.3
@@ -23,7 +23,7 @@ The Facebook module is used for connecting your application with Facebook. This 
 
 ## Getting Started
 
-Note that this module requires Titanium SDK 13.2.0+ (iOS) / 12.7.0+ (Android). You do not need to download or unpack it.
+Note that this module requires Titanium SDK 13.0.0+ (iOS) / 12.7.0+ (Android). You do not need to download or unpack it.
 Edit the modules section of your tiapp.xml file to include this module:
 ```xml
 <modules>
