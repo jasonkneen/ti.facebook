@@ -11,13 +11,13 @@ The Facebook module is used for connecting your application with Facebook. This 
 
 ## Breaking Changes
 
-### v15.0.1 (iOS) — Facebook iOS SDK 18.0.3, Titanium SDK 13.2.0
+### v16.0.0 (iOS) — Facebook iOS SDK 18.0.3, Titanium SDK 13.2.0
 
 - **Minimum iOS deployment target raised to 15.0** (was 12.0). Consumers must target iOS 15+ in their `tiapp.xml` / `Info.plist`.
 - **Minimum Titanium SDK raised to 13.2.0** (was 11.0.0). The module now links against Ti 13.x's `TitaniumKit.xcframework`; older Titanium SDKs are no longer supported.
 - Underlying Facebook iOS SDK bumped from 17.4.0 to 18.0.3 (additive: improved StoreKit / IAP event support, fast-app-switching reintroduced, deferred-deeplink improvements). Upstream changelog: https://github.com/facebook/facebook-ios-sdk/blob/main/CHANGELOG.md
 
-### v14.0.1 (Android) — Facebook Android SDK 18.2.3
+### v15.0.0 (Android) — Facebook Android SDK 18.2.3
 
 - Underlying Facebook Android SDK bumped from 18.0.3 to 18.2.3 (additive: redirect_uri / intent_uri_package_target login flow params, external ID support, thread-safety fixes). No public-API breakages. Upstream changelog: https://github.com/facebook/facebook-android-sdk/blob/main/CHANGELOG.md
 
