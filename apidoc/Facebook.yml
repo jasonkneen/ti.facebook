@@ -300,11 +300,22 @@ description: |
 
     For more information, see the [MessengerButton API reference](Modules.Facebook.MessengerButton).
 
-    ### Login Tracking (iOS only)
+    ### Login Tracking
 
-    The Ti.Facecebook iOS version 10.0.0 and later supports the `loginTracking` property in the [LoginButton](Modules.Facebook.LoginButton.loginTracking)
-    and as a top-level property [loginTracking](Modules.Facebook.loginTracking). You can choose between the two constants
-    [LOGIN_TRACKING_ENABLED](Modules.Facebook.LOGIN_TRACKING_ENABLED) (default) and [LOGIN_TRACKING_LIMITED](Modules.Facebook.LOGIN_TRACKING_LIMITED).
+    The top-level [loginTracking](Modules.Facebook.loginTracking) property and the
+    [LOGIN_TRACKING_ENABLED](Modules.Facebook.LOGIN_TRACKING_ENABLED) /
+    [LOGIN_TRACKING_LIMITED](Modules.Facebook.LOGIN_TRACKING_LIMITED) constants are
+    supported on both iOS and Android. When set to `LOGIN_TRACKING_LIMITED`, calling
+    [authorize](Modules.Facebook.authorize) (or `requestNewReadPermissions`) starts
+    Facebook's OIDC-based Limited Login flow: the SDK returns an Authentication
+    Token (a JWT) instead of a classic Graph access token. The JWT is delivered as
+    `event.authenticationToken.tokenString` on the [login](Modules.Facebook.login)
+    event — verify its signature server-side against Facebook's JWKS.
+
+    The [LoginButton](Modules.Facebook.LoginButton) widget honors `loginTracking`
+    on iOS only. The Android FB SDK's button does not expose Limited Login
+    configuration, so on Android you must trigger Limited Login through
+    `Modules.Facebook.authorize()` rather than via the button.
 
     For more information, see the [Login Tracking API reference](https://developers.facebook.com/docs/facebook-login/limited-login) and review the constants above.
 extends: Titanium.Module
@@ -630,7 +641,27 @@ events:
             Data returned by Facebook when we query for the UID (using graph path "me")
             after a successful login. Data is in JSON format, and includes information
             such as user name, locale and gender.
+
+            For Limited Login (`loginTracking == LOGIN_TRACKING_LIMITED`) no Graph
+            request is made — instead this contains a JSON object built from the
+            verified claims of the Authentication Token (id, name, firstName,
+            middleName, lastName, email, picture).
         type: String
+
+      - name: authenticationToken
+        summary: |
+            OIDC Authentication Token returned by the Facebook SDK when the login
+            attempt was made with `loginTracking == LOGIN_TRACKING_LIMITED`.
+
+            The `tokenString` is a signed JWT — forward it to your backend and
+            verify its signature against Facebook's JWKS (`https://www.facebook.com/.well-known/oauth/openid/jwks`)
+            with `aud` pinned to your Facebook App ID and `iss` pinned to
+            `https://www.facebook.com`. Limited Login does **not** issue an Access
+            Token, so the JWT and its claims are the only authoritative identity
+            material available to the server.
+
+            Undefined when classic login (`LOGIN_TRACKING_ENABLED`) was used.
+        type: Dictionary<LimitedLoginAuthenticationToken>
 
   - name: logout
     summary: Fired at session logout.
@@ -1035,11 +1066,43 @@ properties:
 
   - name: loginTracking
     summary: Gets or sets the desired tracking preference to use for login attempts.
+    description: |
+        On Android, only the programmatic [authorize](Modules.Facebook.authorize)
+        and [requestNewReadPermissions](Modules.Facebook.requestNewReadPermissions)
+        entry points honor this — the [LoginButton](Modules.Facebook.LoginButton)
+        widget always uses classic login because the underlying Facebook Android
+        SDK button does not expose Limited Login configuration.
     type: Number
     constants: [Modules.Facebook.LOGIN_TRACKING_*]
     default: Modules.Facebook.LOGIN_TRACKING_ENABLED
     since: "10.0.0"
-    platforms: [iphone, ipad]
+    platforms: [android, iphone, ipad]
+
+  - name: nonce
+    summary: |
+        Optional nonce used by Limited Login (`LOGIN_TRACKING_LIMITED`) to bind the
+        issued Authentication Token to a server-side challenge.
+    description: |
+        When set, the value is embedded as the `nonce` claim of the JWT the SDK
+        returns. Validate the same value on your backend to defeat replay. If
+        omitted, the Facebook SDK mints a random UUID. Has no effect when
+        `loginTracking == LOGIN_TRACKING_ENABLED`.
+    type: String
+    since: "19.0.0"
+    platforms: [android]
+
+  - name: authenticationToken
+    summary: |
+        Returns the raw Authentication Token (JWT) from the most recent Limited
+        Login, or an empty string if none is currently set.
+    description: |
+        Equivalent to reading `FBSDKAuthenticationToken.currentAuthenticationToken.tokenString`
+        on iOS and `AuthenticationToken.getCurrentAuthenticationToken().getToken()`
+        on Android.
+    type: String
+    permission: read-only
+    since: "19.0.0"
+    platforms: [android]
 
   - name: advertiserTrackingEnabled
     summary: Gets or sets the SDK's advertiser-tracking flag.
@@ -1063,27 +1126,29 @@ properties:
 
   - name: LOGIN_TRACKING_ENABLED
     summary: |
-        Use with [LoginButton.loginTracking](Modules.Facebook.LoginButton.loginTracking) or the top-level
-        [loginTracking](Modules.Facebook.loginTracking) property to set the desired tracking preference.
+        Use with [LoginButton.loginTracking](Modules.Facebook.LoginButton.loginTracking) (iOS)
+        or the top-level [loginTracking](Modules.Facebook.loginTracking) property to set the
+        desired tracking preference.
     description: |
         For more information on the differences between
-        `LOGIN_TRACKING_ENABLED` and `LOGIN_TRACKING_LIMITED` see: https://developers.facebook.com/docs/facebook-login/ios/limited-login/
+        `LOGIN_TRACKING_ENABLED` and `LOGIN_TRACKING_LIMITED` see: https://developers.facebook.com/docs/facebook-login/limited-login/
     type: Number
     permission: read-only
     since: "10.0.0"
-    platforms: [iphone, ipad]
+    platforms: [android, iphone, ipad]
 
   - name: LOGIN_TRACKING_LIMITED
     summary: |
-        Use with [LoginButton.loginTracking](Modules.Facebook.LoginButton.loginTracking) or the top-level
-        [loginTracking](Modules.Facebook.loginTracking) property to set the desired tracking preference.
+        Use with [LoginButton.loginTracking](Modules.Facebook.LoginButton.loginTracking) (iOS)
+        or the top-level [loginTracking](Modules.Facebook.loginTracking) property to set the
+        desired tracking preference.
     description: |
         For more information on the differences between
-        `LOGIN_TRACKING_ENABLED` and `LOGIN_TRACKING_LIMITED` see: https://developers.facebook.com/docs/facebook-login/ios/limited-login/
+        `LOGIN_TRACKING_ENABLED` and `LOGIN_TRACKING_LIMITED` see: https://developers.facebook.com/docs/facebook-login/limited-login/
     type: Number
     permission: read-only
     since: "10.0.0"
-    platforms: [iphone, ipad]
+    platforms: [android, iphone, ipad]
 
   - name: permissions
     summary: Array of permissions to request for your app.
@@ -1371,6 +1436,32 @@ examples:
             }
         });
         ```
+
+---
+name: LimitedLoginAuthenticationToken
+summary: |
+    Shape of `event.authenticationToken` on the [login](Modules.Facebook.login) event
+    when Limited Login (`LOGIN_TRACKING_LIMITED`) is used.
+platforms: [android, iphone, ipad]
+since: "19.0.0"
+properties:
+  - name: tokenString
+    summary: The signed JWT (header.payload.signature) issued by Facebook. Verify on your backend.
+    type: String
+
+  - name: nonce
+    summary: |
+        The nonce echoed back by Facebook. Matches the [nonce](Modules.Facebook.nonce)
+        you supplied (Android) or the value the SDK generated, and is also present as
+        a claim inside the JWT.
+    type: String
+
+  - name: graphDomain
+    summary: |
+        Optional graph domain hint returned by the iOS SDK (e.g. `gaming`).
+        `undefined` on Android.
+    type: String
+    optional: true
 
 ---
 name: FacebookGraphResponse
