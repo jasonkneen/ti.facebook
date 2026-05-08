@@ -107,6 +107,12 @@ properties:
 
   - name: loginTracking
     summary: Gets or sets the desired tracking preference to use for login attempts.
+    description: |
+        iOS only. The Facebook Android SDK's `LoginButton` does not support
+        Limited Login configuration; on Android, trigger Limited Login by setting
+        [Modules.Facebook.loginTracking](Modules.Facebook.loginTracking) and
+        calling [Modules.Facebook.authorize](Modules.Facebook.authorize) instead
+        of using this widget.
     type: Number
     constants: [Modules.Facebook.LOGIN_TRACKING_*]
     default: Modules.Facebook.LOGIN_TRACKING_ENABLED

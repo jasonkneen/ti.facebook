@@ -27,6 +27,7 @@
 		3AE3ED8E2940DC050039F1A7 /* FBSDKCoreKit_Basics.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE3ED892940DC050039F1A7 /* FBSDKCoreKit_Basics.xcframework */; };
 		3AE3ED8F2940DC050039F1A7 /* FBAEMKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE3ED8A2940DC050039F1A7 /* FBAEMKit.xcframework */; };
 		3AE3ED902940DC050039F1A7 /* FBSDKCoreKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE3ED8B2940DC050039F1A7 /* FBSDKCoreKit.xcframework */; };
+		B1E00E65241D179500C384C1 /* TitaniumKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E00E64241D179500C384C1 /* TitaniumKit.xcframework */; };
 		DB34EBF91F2574B70057008D /* FacebookLoginButton.h in Headers */ = {isa = PBXBuildFile; fileRef = DB34EBE41F2574B70057008D /* FacebookLoginButton.h */; };
 		DB34EBFA1F2574B70057008D /* FacebookLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DB34EBE51F2574B70057008D /* FacebookLoginButton.m */; };
 		DB34EBFB1F2574B70057008D /* FacebookLoginButtonProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DB34EBE61F2574B70057008D /* FacebookLoginButtonProxy.h */; };
@@ -57,6 +58,7 @@
 		3AE3ED892940DC050039F1A7 /* FBSDKCoreKit_Basics.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:V9WTTPBFK9:Meta Platforms, Inc."; lastKnownFileType = wrapper.xcframework; name = FBSDKCoreKit_Basics.xcframework; path = platform/FBSDKCoreKit_Basics.xcframework; sourceTree = "<group>"; };
 		3AE3ED8A2940DC050039F1A7 /* FBAEMKit.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:V9WTTPBFK9:Meta Platforms, Inc."; lastKnownFileType = wrapper.xcframework; name = FBAEMKit.xcframework; path = platform/FBAEMKit.xcframework; sourceTree = "<group>"; };
 		3AE3ED8B2940DC050039F1A7 /* FBSDKCoreKit.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:V9WTTPBFK9:Meta Platforms, Inc."; lastKnownFileType = wrapper.xcframework; name = FBSDKCoreKit.xcframework; path = platform/FBSDKCoreKit.xcframework; sourceTree = "<group>"; };
+		B1E00E64241D179500C384C1 /* TitaniumKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TitaniumKit.xcframework; path = "$(TITANIUM_SDK)/iphone/Frameworks/TitaniumKit.xcframework"; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libfacebook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libfacebook.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB34EBE41F2574B70057008D /* FacebookLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookLoginButton.h; sourceTree = "<group>"; };
 		DB34EBE51F2574B70057008D /* FacebookLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookLoginButton.m; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				3AE3ED8F2940DC050039F1A7 /* FBAEMKit.xcframework in Frameworks */,
 				3AE3ED8D2940DC050039F1A7 /* FBSDKShareKit.xcframework in Frameworks */,
 				3AE3ED902940DC050039F1A7 /* FBSDKCoreKit.xcframework in Frameworks */,
+				B1E00E65241D179500C384C1 /* TitaniumKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +117,7 @@
 				3AE3ED8B2940DC050039F1A7 /* FBSDKCoreKit.xcframework */,
 				3AE3ED872940DC050039F1A7 /* FBSDKLoginKit.xcframework */,
 				3AE3ED882940DC050039F1A7 /* FBSDKShareKit.xcframework */,
+				B1E00E64241D179500C384C1 /* TitaniumKit.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -305,7 +309,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = (
 					"-DDEBUG",
@@ -317,6 +321,8 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 				WARNING_CFLAGS = "-Wno-arc-performSelector-leaks";
 			};
@@ -352,7 +358,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DTI_POST_1_2";
@@ -360,6 +366,8 @@
 				PRODUCT_NAME = facebook;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 				WARNING_CFLAGS = "-Wno-arc-performSelector-leaks";
 			};
@@ -415,7 +423,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DDEBUG",
@@ -427,6 +435,8 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -480,13 +490,15 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = facebook;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;

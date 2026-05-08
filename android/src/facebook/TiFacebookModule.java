@@ -21,6 +21,8 @@ import android.os.Looper;
 import androidx.annotation.NonNull;
 
 import com.facebook.AccessToken;
+import com.facebook.AuthenticationToken;
+import com.facebook.AuthenticationTokenClaims;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -34,6 +36,7 @@ import com.facebook.appevents.AppEventsLogger;
 import com.facebook.applinks.AppLinkData;
 import com.facebook.login.DefaultAudience;
 import com.facebook.login.LoginBehavior;
+import com.facebook.login.LoginConfiguration;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.share.Sharer;
@@ -158,9 +161,19 @@ public class TiFacebookModule extends KrollModule implements OnActivityResultEve
 	@Kroll.constant
 	public static final int SHARE_DIALOG_MODE_FEED_WEB = 6; // For iOS-parity
 
+	// Login tracking modes — values mirror iOS FBSDKLoginTracking so the JS API stays in lockstep.
+	@Kroll.constant
+	public static final int LOGIN_TRACKING_ENABLED = 0;
+	@Kroll.constant
+	public static final int LOGIN_TRACKING_LIMITED = 1;
+
+	public static final String PROPERTY_AUTHENTICATION_TOKEN = "authenticationToken";
+
 	private static TiFacebookModule module;
 	private static String[] permissions = new String[] {};
 	private LoginBehavior loginBehavior = LoginBehavior.NATIVE_WITH_FALLBACK;
+	private int loginTracking = LOGIN_TRACKING_ENABLED;
+	private String loginNonce = null;
 
 	private KrollFunction permissionCallback = null;
 
@@ -359,6 +372,11 @@ public class TiFacebookModule extends KrollModule implements OnActivityResultEve
 		if (AccessToken.getCurrentAccessToken() != null) {
 			return AccessToken.getCurrentAccessToken().getUserId();
 		}
+		// Fall back to the Limited Login subject (app-scoped, not the Graph user id).
+		AuthenticationToken authToken = AuthenticationToken.getCurrentAuthenticationToken();
+		if (authToken != null && authToken.getClaims() != null) {
+			return authToken.getClaims().getSub();
+		}
 		return "";
 	}
 
@@ -416,7 +434,8 @@ public class TiFacebookModule extends KrollModule implements OnActivityResultEve
 	public boolean getLoggedIn()
 	// clang-format on
 	{
-		return (AccessToken.getCurrentAccessToken() != null);
+		return AccessToken.getCurrentAccessToken() != null
+			|| AuthenticationToken.getCurrentAuthenticationToken() != null;
 	}
 
 	// clang-format off
@@ -431,6 +450,52 @@ public class TiFacebookModule extends KrollModule implements OnActivityResultEve
             return permissionsList.toArray(new String[0]);
 		}
 		return null;
+	}
+
+	// clang-format off
+	@Kroll.getProperty
+	@Kroll.method
+	public int getLoginTracking()
+	// clang-format on
+	{
+		return loginTracking;
+	}
+
+	// clang-format off
+	@Kroll.setProperty
+	@Kroll.method
+	public void setLoginTracking(int trackingConstant)
+	// clang-format on
+	{
+		loginTracking = trackingConstant;
+	}
+
+	// clang-format off
+	@Kroll.getProperty
+	@Kroll.method
+	public String getNonce()
+	// clang-format on
+	{
+		return loginNonce;
+	}
+
+	// clang-format off
+	@Kroll.setProperty
+	@Kroll.method
+	public void setNonce(String nonce)
+	// clang-format on
+	{
+		loginNonce = nonce;
+	}
+
+	// clang-format off
+	@Kroll.getProperty
+	@Kroll.method
+	public String getAuthenticationToken()
+	// clang-format on
+	{
+		AuthenticationToken token = AuthenticationToken.getCurrentAuthenticationToken();
+		return (token != null) ? token.getToken() : "";
 	}
 
 	// clang-format off
@@ -480,6 +545,10 @@ public class TiFacebookModule extends KrollModule implements OnActivityResultEve
 	{
 		permissionCallback = callback;
 		Activity activity = TiApplication.getInstance().getCurrentActivity();
+		if (loginTracking == LOGIN_TRACKING_LIMITED) {
+			LoginManager.getInstance().loginWithConfiguration(activity, buildLoginConfiguration(permissions));
+			return;
+		}
 		LoginManager.getInstance().logInWithReadPermissions(activity, Arrays.asList(permissions));
 	}
 
@@ -534,6 +603,28 @@ public class TiFacebookModule extends KrollModule implements OnActivityResultEve
 					permissionCallback = null;
 					return;
 				}
+
+				// Limited Login does not return a usable AccessToken — the SDK
+				// hands back an AuthenticationToken (OIDC ID token) instead, and
+				// any further data must come from its claims since Graph API
+				// calls are not allowed.
+				AuthenticationToken authenticationToken = loginResult.getAuthenticationToken();
+				if (authenticationToken != null) {
+					data.put(PROPERTY_SUCCESS, true);
+					data.put(PROPERTY_CANCELLED, false);
+					data.put(PROPERTY_CODE, 0);
+					data.put(PROPERTY_AUTHENTICATION_TOKEN, buildAuthenticationTokenDict(authenticationToken));
+
+					AuthenticationTokenClaims claims = authenticationToken.getClaims();
+					if (claims != null) {
+						data.put(PROPERTY_UID, claims.getSub());
+						data.put(PROPERTY_DATA, buildClaimsJson(claims));
+					}
+
+					fireEvent(EVENT_LOGIN, data);
+					return;
+				}
+
 				data.put(PROPERTY_SUCCESS, true);
 				data.put(PROPERTY_CANCELLED, false);
 				AccessToken accessToken = AccessToken.getCurrentAccessToken();
@@ -577,7 +668,53 @@ public class TiFacebookModule extends KrollModule implements OnActivityResultEve
 			setLoginManagerLoginBehavior();
 		}
 
+		if (loginTracking == LOGIN_TRACKING_LIMITED) {
+			LoginManager.getInstance().loginWithConfiguration(activity, buildLoginConfiguration(TiFacebookModule.permissions));
+			return;
+		}
+
 		LoginManager.getInstance().logInWithReadPermissions(activity, Arrays.asList(TiFacebookModule.permissions));
+	}
+
+	private LoginConfiguration buildLoginConfiguration(String[] permissions)
+	{
+		// LoginConfiguration requires a non-empty, whitespace-free nonce. If the
+		// caller didn't supply one we let the SDK mint a random UUID via the
+		// permissions-only constructor; otherwise we honor the explicit nonce
+		// (e.g. for replay-protection bound to a server-side challenge).
+		if (loginNonce != null && !loginNonce.isEmpty()) {
+			return new LoginConfiguration(Arrays.asList(permissions), loginNonce);
+		}
+		return new LoginConfiguration(Arrays.asList(permissions));
+	}
+
+	private static KrollDict buildAuthenticationTokenDict(AuthenticationToken token)
+	{
+		KrollDict dict = new KrollDict();
+		dict.put("tokenString", token.getToken());
+		dict.put("nonce", token.getExpectedNonce());
+		// graphDomain is iOS-only on the FB SDK; expose null on Android so the
+		// shape of the event payload stays consistent across platforms.
+		dict.put("graphDomain", null);
+		return dict;
+	}
+
+	private static String buildClaimsJson(AuthenticationTokenClaims claims)
+	{
+		try {
+			JSONObject json = new JSONObject();
+			json.put("id", claims.getSub());
+			json.putOpt("name", claims.getName());
+			json.putOpt("firstName", claims.getGivenName());
+			json.putOpt("middleName", claims.getMiddleName());
+			json.putOpt("lastName", claims.getFamilyName());
+			json.putOpt("email", claims.getEmail());
+			json.putOpt("picture", claims.getPicture());
+			return json.toString();
+		} catch (Exception e) {
+			Log.e(TAG, "Failed to serialize Limited Login claims: " + e.getMessage());
+			return "{}";
+		}
 	}
 
 	@Kroll.method

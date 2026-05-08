@@ -15,6 +15,232 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "AppSwitch",
+        "printedName": "AppSwitch",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "disabled",
+            "printedName": "disabled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FBSDKLoginKit.AppSwitch.Type) -> FBSDKLoginKit.AppSwitch",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppSwitch",
+                    "printedName": "FBSDKLoginKit.AppSwitch",
+                    "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FBSDKLoginKit.AppSwitch.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AppSwitch",
+                        "printedName": "FBSDKLoginKit.AppSwitch",
+                        "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch@FBSDKAppSwitchDisabled",
+            "mangledName": "$s13FBSDKLoginKit9AppSwitchO8disabledyA2CmF",
+            "moduleName": "FBSDKLoginKit",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "enabled",
+            "printedName": "enabled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FBSDKLoginKit.AppSwitch.Type) -> FBSDKLoginKit.AppSwitch",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppSwitch",
+                    "printedName": "FBSDKLoginKit.AppSwitch",
+                    "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FBSDKLoginKit.AppSwitch.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AppSwitch",
+                        "printedName": "FBSDKLoginKit.AppSwitch",
+                        "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch@FBSDKAppSwitchEnabled",
+            "mangledName": "$s13FBSDKLoginKit9AppSwitchO7enabledyA2CmF",
+            "moduleName": "FBSDKLoginKit",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FBSDKLoginKit.AppSwitch?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppSwitch",
+                    "printedName": "FBSDKLoginKit.AppSwitch",
+                    "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13FBSDKLoginKit9AppSwitchO8rawValueACSgSu_tcfc",
+            "mangledName": "$s13FBSDKLoginKit9AppSwitchO8rawValueACSgSu_tcfc",
+            "moduleName": "FBSDKLoginKit",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13FBSDKLoginKit9AppSwitchO8rawValueSuvp",
+            "mangledName": "$s13FBSDKLoginKit9AppSwitchO8rawValueSuvp",
+            "moduleName": "FBSDKLoginKit",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt",
+                    "printedName": "Swift.UInt",
+                    "usr": "s:Su"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13FBSDKLoginKit9AppSwitchO8rawValueSuvg",
+                "mangledName": "$s13FBSDKLoginKit9AppSwitchO8rawValueSuvg",
+                "moduleName": "FBSDKLoginKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch",
+        "mangledName": "$s13FBSDKLoginKit9AppSwitchO",
+        "moduleName": "FBSDKLoginKit",
+        "objc_name": "FBSDKAppSwitch",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "UInt",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt",
+                    "printedName": "Swift.UInt",
+                    "usr": "s:Su"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "FBSDKCoreKit",
         "printedName": "FBSDKCoreKit",
@@ -3207,6 +3433,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -3524,6 +3757,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -6691,6 +6931,108 @@
           },
           {
             "kind": "Var",
+            "name": "appSwitch",
+            "printedName": "appSwitch",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppSwitch",
+                "printedName": "FBSDKLoginKit.AppSwitch",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginButton(py)appSwitch",
+            "mangledName": "$s13FBSDKLoginKit13FBLoginButtonC9appSwitchAA03AppF0Ovp",
+            "moduleName": "FBSDKLoginKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppSwitch",
+                    "printedName": "FBSDKLoginKit.AppSwitch",
+                    "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginButton(im)appSwitch",
+                "mangledName": "$s13FBSDKLoginKit13FBLoginButtonC9appSwitchAA03AppF0Ovg",
+                "moduleName": "FBSDKLoginKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppSwitch",
+                    "printedName": "FBSDKLoginKit.AppSwitch",
+                    "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginButton(im)setAppSwitch:",
+                "mangledName": "$s13FBSDKLoginKit13FBLoginButtonC9appSwitchAA03AppF0Ovs",
+                "moduleName": "FBSDKLoginKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13FBSDKLoginKit13FBLoginButtonC9appSwitchAA03AppF0OvM",
+                "mangledName": "$s13FBSDKLoginKit13FBLoginButtonC9appSwitchAA03AppF0OvM",
+                "moduleName": "FBSDKLoginKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "nonce",
             "printedName": "nonce",
             "children": [
@@ -9525,6 +9867,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -11402,6 +11751,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -12336,6 +12692,57 @@
           },
           {
             "kind": "Var",
+            "name": "appSwitch",
+            "printedName": "appSwitch",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppSwitch",
+                "printedName": "FBSDKLoginKit.AppSwitch",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration(py)appSwitch",
+            "mangledName": "$s13FBSDKLoginKit18LoginConfigurationC9appSwitchAA03AppF0Ovp",
+            "moduleName": "FBSDKLoginKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppSwitch",
+                    "printedName": "FBSDKLoginKit.AppSwitch",
+                    "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration(im)appSwitch",
+                "mangledName": "$s13FBSDKLoginKit18LoginConfigurationC9appSwitchAA03AppF0Ovg",
+                "moduleName": "FBSDKLoginKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "requestedPermissions",
             "printedName": "requestedPermissions",
             "children": [
@@ -12662,6 +13069,85 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init(permissions:tracking:nonce:messengerPageId:appSwitch:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FBSDKLoginKit.LoginConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LoginConfiguration",
+                    "printedName": "FBSDKLoginKit.LoginConfiguration",
+                    "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LoginTracking",
+                "printedName": "FBSDKLoginKit.LoginTracking",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKLoginTracking"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AppSwitch",
+                "printedName": "FBSDKLoginKit.AppSwitch",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration(im)initWithPermissions:tracking:nonce:messengerPageId:appSwitch:",
+            "mangledName": "$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonce15messengerPageId9appSwitchACSgSaySSG_AA0C8TrackingOS2SSgAA03AppL0Otcfc",
+            "moduleName": "FBSDKLoginKit",
+            "objc_name": "initWithPermissions:tracking:nonce:messengerPageId:appSwitch:",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(permissions:tracking:nonce:messengerPageId:authType:)",
             "children": [
               {
@@ -12749,6 +13235,99 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init(permissions:tracking:nonce:messengerPageId:authType:appSwitch:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FBSDKLoginKit.LoginConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LoginConfiguration",
+                    "printedName": "FBSDKLoginKit.LoginConfiguration",
+                    "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LoginTracking",
+                "printedName": "FBSDKLoginKit.LoginTracking",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKLoginTracking"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FBSDKLoginKit.LoginAuthType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LoginAuthType",
+                    "printedName": "FBSDKLoginKit.LoginAuthType",
+                    "usr": "c:FBSDKLoginAuthType.h@T@FBSDKLoginAuthType"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AppSwitch",
+                "printedName": "FBSDKLoginKit.AppSwitch",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration(im)initWithPermissions:tracking:nonce:messengerPageId:authType:appSwitch:",
+            "mangledName": "$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonce15messengerPageId8authType9appSwitchACSgSaySSG_AA0C8TrackingOS2SSgSo0a4AuthL0aSgAA03AppN0Otcfc",
+            "moduleName": "FBSDKLoginKit",
+            "objc_name": "initWithPermissions:tracking:nonce:messengerPageId:authType:appSwitch:",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(permissions:tracking:nonce:)",
             "children": [
               {
@@ -12797,6 +13376,71 @@
             "mangledName": "$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonceACSgSaySSG_AA0C8TrackingOSStcfc",
             "moduleName": "FBSDKLoginKit",
             "objc_name": "initWithPermissions:tracking:nonce:",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(permissions:tracking:nonce:appSwitch:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FBSDKLoginKit.LoginConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LoginConfiguration",
+                    "printedName": "FBSDKLoginKit.LoginConfiguration",
+                    "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LoginTracking",
+                "printedName": "FBSDKLoginKit.LoginTracking",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKLoginTracking"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AppSwitch",
+                "printedName": "FBSDKLoginKit.AppSwitch",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration(im)initWithPermissions:tracking:nonce:appSwitch:",
+            "mangledName": "$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonce9appSwitchACSgSaySSG_AA0C8TrackingOSSAA03AppI0Otcfc",
+            "moduleName": "FBSDKLoginKit",
+            "objc_name": "initWithPermissions:tracking:nonce:appSwitch:",
             "declAttributes": [
               "Convenience",
               "AccessControl",
@@ -12864,6 +13508,79 @@
             "mangledName": "$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking15messengerPageIdACSgSaySSG_AA0C8TrackingOSSSgtcfc",
             "moduleName": "FBSDKLoginKit",
             "objc_name": "initWithPermissions:tracking:messengerPageId:",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(permissions:tracking:messengerPageId:appSwitch:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FBSDKLoginKit.LoginConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LoginConfiguration",
+                    "printedName": "FBSDKLoginKit.LoginConfiguration",
+                    "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LoginTracking",
+                "printedName": "FBSDKLoginKit.LoginTracking",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKLoginTracking"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AppSwitch",
+                "printedName": "FBSDKLoginKit.AppSwitch",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration(im)initWithPermissions:tracking:messengerPageId:appSwitch:",
+            "mangledName": "$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking15messengerPageId9appSwitchACSgSaySSG_AA0C8TrackingOSSSgAA03AppK0Otcfc",
+            "moduleName": "FBSDKLoginKit",
+            "objc_name": "initWithPermissions:tracking:messengerPageId:appSwitch:",
             "declAttributes": [
               "Convenience",
               "AccessControl",
@@ -12956,7 +13673,94 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(permissions:tracking:nonce:messengerPageId:authType:codeVerifier:)",
+            "printedName": "init(permissions:tracking:messengerPageId:authType:appSwitch:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FBSDKLoginKit.LoginConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LoginConfiguration",
+                    "printedName": "FBSDKLoginKit.LoginConfiguration",
+                    "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LoginTracking",
+                "printedName": "FBSDKLoginKit.LoginTracking",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKLoginTracking"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FBSDKLoginKit.LoginAuthType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LoginAuthType",
+                    "printedName": "FBSDKLoginKit.LoginAuthType",
+                    "usr": "c:FBSDKLoginAuthType.h@T@FBSDKLoginAuthType"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AppSwitch",
+                "printedName": "FBSDKLoginKit.AppSwitch",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration(im)initWithPermissions:tracking:messengerPageId:authType:appSwitch:",
+            "mangledName": "$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking15messengerPageId8authType9appSwitchACSgSaySSG_AA0C8TrackingOSSSgSo0a4AuthK0aSgAA03AppM0Otcfc",
+            "moduleName": "FBSDKLoginKit",
+            "objc_name": "initWithPermissions:tracking:messengerPageId:authType:appSwitch:",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(permissions:tracking:nonce:messengerPageId:authType:appSwitch:codeVerifier:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -13028,16 +13832,22 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "AppSwitch",
+                "printedName": "FBSDKLoginKit.AppSwitch",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "CodeVerifier",
                 "printedName": "FBSDKLoginKit.CodeVerifier",
                 "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKCodeVerifier"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration(im)initWithPermissions:tracking:nonce:messengerPageId:authType:codeVerifier:",
-            "mangledName": "$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonce15messengerPageId8authType12codeVerifierACSgSaySSG_AA0C8TrackingOS2SSgSo0a4AuthL0aSgAA04CodeN0Ctcfc",
+            "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration(im)initWithPermissions:tracking:nonce:messengerPageId:authType:appSwitch:codeVerifier:",
+            "mangledName": "$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonce15messengerPageId8authType9appSwitch12codeVerifierACSgSaySSG_AA0C8TrackingOS2SSgSo0a4AuthL0aSgAA03AppN0OAA04CodeP0Ctcfc",
             "moduleName": "FBSDKLoginKit",
-            "objc_name": "initWithPermissions:tracking:nonce:messengerPageId:authType:codeVerifier:",
+            "objc_name": "initWithPermissions:tracking:nonce:messengerPageId:authType:appSwitch:codeVerifier:",
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -13101,6 +13911,65 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init(permissions:tracking:appSwitch:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FBSDKLoginKit.LoginConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LoginConfiguration",
+                    "printedName": "FBSDKLoginKit.LoginConfiguration",
+                    "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LoginTracking",
+                "printedName": "FBSDKLoginKit.LoginTracking",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKLoginTracking"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AppSwitch",
+                "printedName": "FBSDKLoginKit.AppSwitch",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration(im)initWithPermissions:tracking:appSwitch:",
+            "mangledName": "$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking9appSwitchACSgSaySSG_AA0C8TrackingOAA03AppH0Otcfc",
+            "moduleName": "FBSDKLoginKit",
+            "objc_name": "initWithPermissions:tracking:appSwitch:",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(tracking:)",
             "children": [
               {
@@ -13140,7 +14009,52 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(permissions:tracking:nonce:messengerPageId:authType:codeVerifier:)",
+            "printedName": "init(tracking:appSwitch:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FBSDKLoginKit.LoginConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LoginConfiguration",
+                    "printedName": "FBSDKLoginKit.LoginConfiguration",
+                    "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LoginTracking",
+                "printedName": "FBSDKLoginKit.LoginTracking",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKLoginTracking"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AppSwitch",
+                "printedName": "FBSDKLoginKit.AppSwitch",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration(im)initWithTracking:appSwitch:",
+            "mangledName": "$s13FBSDKLoginKit18LoginConfigurationC8tracking9appSwitchACSgAA0C8TrackingO_AA03AppG0Otcfc",
+            "moduleName": "FBSDKLoginKit",
+            "objc_name": "initWithTracking:appSwitch:",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(permissions:tracking:nonce:messengerPageId:authType:appSwitch:codeVerifier:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -13217,6 +14131,13 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "AppSwitch",
+                "printedName": "FBSDKLoginKit.AppSwitch",
+                "hasDefaultArg": true,
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKAppSwitch"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "CodeVerifier",
                 "printedName": "FBSDKLoginKit.CodeVerifier",
                 "hasDefaultArg": true,
@@ -13224,8 +14145,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonce15messengerPageId8authType12codeVerifierACSgShy09FBSDKCoreB010PermissionOG_AA0C8TrackingOS2SSgSo0a4AuthL0aSgAA04CodeN0Ctcfc",
-            "mangledName": "$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonce15messengerPageId8authType12codeVerifierACSgShy09FBSDKCoreB010PermissionOG_AA0C8TrackingOS2SSgSo0a4AuthL0aSgAA04CodeN0Ctcfc",
+            "usr": "s:13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonce15messengerPageId8authType9appSwitch12codeVerifierACSgShy09FBSDKCoreB010PermissionOG_AA0C8TrackingOS2SSgSo0a4AuthL0aSgAA03AppN0OAA04CodeP0Ctcfc",
+            "mangledName": "$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonce15messengerPageId8authType9appSwitch12codeVerifierACSgShy09FBSDKCoreB010PermissionOG_AA0C8TrackingOS2SSgSo0a4AuthL0aSgAA03AppN0OAA04CodeP0Ctcfc",
             "moduleName": "FBSDKLoginKit",
             "declAttributes": [
               "Convenience",
@@ -14279,6 +15200,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -14890,6 +15818,13 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -16450,9 +17385,17 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "UIViewController",
-                "printedName": "UIKit.UIViewController",
-                "usr": "c:objc(cs)UIViewController"
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeFunc",
@@ -16504,7 +17447,7 @@
             ],
             "declKind": "Func",
             "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginManager(im)reauthorizeDataAccess:handler:",
-            "mangledName": "$s13FBSDKLoginKit12LoginManagerC21reauthorizeDataAccess4from7handlerySo16UIViewControllerC_yAA0cdC6ResultCSg_s5Error_pSgtctF",
+            "mangledName": "$s13FBSDKLoginKit12LoginManagerC21reauthorizeDataAccess4from7handlerySo16UIViewControllerCSg_yAA0cdC6ResultCSg_s5Error_pSgtctF",
             "moduleName": "FBSDKLoginKit",
             "objc_name": "reauthorizeDataAccess:handler:",
             "declAttributes": [
@@ -24560,10 +25503,334 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "BitwiseCopyable",
             "printedName": "BitwiseCopyable",
             "usr": "s:s15BitwiseCopyableP",
             "mangledName": "$ss15BitwiseCopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "FBSDKCoreKit",
+        "printedName": "FBSDKCoreKit",
+        "declKind": "Import",
+        "moduleName": "FBSDKLoginKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "FBSDKCoreKit_Basics",
+        "printedName": "FBSDKCoreKit_Basics",
+        "declKind": "Import",
+        "moduleName": "FBSDKLoginKit"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "FBSDKLoginKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NativeAppLoginHandler",
+        "printedName": "NativeAppLoginHandler",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "loginManager",
+            "printedName": "loginManager",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LoginManager",
+                "printedName": "FBSDKLoginKit.LoginManager",
+                "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginManager"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13FBSDKLoginKit21NativeAppLoginHandlerC12loginManager33_AEE940FA84A53E8451E5753879EBE87ELLAA0eH0Cvp",
+            "mangledName": "$s13FBSDKLoginKit21NativeAppLoginHandlerC12loginManager33_AEE940FA84A53E8451E5753879EBE87ELLAA0eH0Cvp",
+            "moduleName": "FBSDKLoginKit",
+            "isInternal": true,
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 0,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "configuration",
+            "printedName": "configuration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LoginConfiguration",
+                "printedName": "FBSDKLoginKit.LoginConfiguration",
+                "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13FBSDKLoginKit21NativeAppLoginHandlerC13configuration33_AEE940FA84A53E8451E5753879EBE87ELLAA0E13ConfigurationCvp",
+            "mangledName": "$s13FBSDKLoginKit21NativeAppLoginHandlerC13configuration33_AEE940FA84A53E8451E5753879EBE87ELLAA0E13ConfigurationCvp",
+            "moduleName": "FBSDKLoginKit",
+            "isInternal": true,
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 1,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "defaultAudience",
+            "printedName": "defaultAudience",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultAudience",
+                "printedName": "FBSDKLoginKit.DefaultAudience",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKDefaultAudience"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13FBSDKLoginKit21NativeAppLoginHandlerC15defaultAudience33_AEE940FA84A53E8451E5753879EBE87ELLAA07DefaultH0Ovp",
+            "mangledName": "$s13FBSDKLoginKit21NativeAppLoginHandlerC15defaultAudience33_AEE940FA84A53E8451E5753879EBE87ELLAA07DefaultH0Ovp",
+            "moduleName": "FBSDKLoginKit",
+            "isInternal": true,
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 2,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "logger",
+            "printedName": "logger",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FBSDKLoginKit.LoginManagerLogger?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LoginManagerLogger",
+                    "printedName": "FBSDKLoginKit.LoginManagerLogger",
+                    "usr": "s:13FBSDKLoginKit18LoginManagerLoggerC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13FBSDKLoginKit21NativeAppLoginHandlerC6logger33_AEE940FA84A53E8451E5753879EBE87ELLAA0E13ManagerLoggerCSgvp",
+            "mangledName": "$s13FBSDKLoginKit21NativeAppLoginHandlerC6logger33_AEE940FA84A53E8451E5753879EBE87ELLAA0E13ManagerLoggerCSgvp",
+            "moduleName": "FBSDKLoginKit",
+            "isInternal": true,
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 3,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(loginManager:configuration:defaultAudience:logger:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NativeAppLoginHandler",
+                "printedName": "FBSDKLoginKit.NativeAppLoginHandler",
+                "usr": "s:13FBSDKLoginKit21NativeAppLoginHandlerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LoginManager",
+                "printedName": "FBSDKLoginKit.LoginManager",
+                "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginManager"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LoginConfiguration",
+                "printedName": "FBSDKLoginKit.LoginConfiguration",
+                "usr": "c:@M@FBSDKLoginKit@objc(cs)FBSDKLoginConfiguration"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultAudience",
+                "printedName": "FBSDKLoginKit.DefaultAudience",
+                "usr": "c:@M@FBSDKLoginKit@E@FBSDKDefaultAudience"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FBSDKLoginKit.LoginManagerLogger?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LoginManagerLogger",
+                    "printedName": "FBSDKLoginKit.LoginManagerLogger",
+                    "usr": "s:13FBSDKLoginKit18LoginManagerLoggerC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13FBSDKLoginKit21NativeAppLoginHandlerC12loginManager13configuration15defaultAudience6loggerAcA0eH0C_AA0E13ConfigurationCAA07DefaultK0OAA0eH6LoggerCSgtcfc",
+            "mangledName": "$s13FBSDKLoginKit21NativeAppLoginHandlerC12loginManager13configuration15defaultAudience6loggerAcA0eH0C_AA0E13ConfigurationCAA07DefaultK0OAA0eH6LoggerCSgtcfc",
+            "moduleName": "FBSDKLoginKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "shouldAttemptNativeAppLogin",
+            "printedName": "shouldAttemptNativeAppLogin()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13FBSDKLoginKit21NativeAppLoginHandlerC013shouldAttemptcdE0SbyF",
+            "mangledName": "$s13FBSDKLoginKit21NativeAppLoginHandlerC013shouldAttemptcdE0SbyF",
+            "moduleName": "FBSDKLoginKit",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "performNativeAppLogin",
+            "printedName": "performNativeAppLogin(loggingToken:handler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool, (any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Bool, (any Swift.Error)?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "(any Swift.Error)?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13FBSDKLoginKit21NativeAppLoginHandlerC07performcdE012loggingToken7handlerySSSg_ySb_s5Error_pSgtctF",
+            "mangledName": "$s13FBSDKLoginKit21NativeAppLoginHandlerC07performcdE012loggingToken7handlerySSSg_ySb_s5Error_pSgtctF",
+            "moduleName": "FBSDKLoginKit",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13FBSDKLoginKit21NativeAppLoginHandlerC",
+        "mangledName": "$s13FBSDKLoginKit21NativeAppLoginHandlerC",
+        "moduleName": "FBSDKLoginKit",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -28599,6 +29866,13 @@
             "printedName": "_HasCustomAnyHashableRepresentation",
             "usr": "s:s35_HasCustomAnyHashableRepresentationP",
             "mangledName": "$ss35_HasCustomAnyHashableRepresentationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -28697,6 +29971,13 @@
     "json_format_version": 8
   },
   "ConstValues": [
+    {
+      "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKLoginKit\/FBSDKLoginKit\/AppSwitch.swift",
+      "kind": "IntegerLiteral",
+      "offset": 674,
+      "length": 7,
+      "value": "1"
+    },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKLoginKit\/FBSDKLoginKit\/Internal\/AuthenticationTokenFactory.swift",
       "kind": "StringLiteral",
@@ -28882,63 +30163,63 @@
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKLoginKit\/FBSDKLoginKit\/FBLoginButton.swift",
       "kind": "BooleanLiteral",
-      "offset": 3428,
+      "offset": 3541,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKLoginKit\/FBSDKLoginKit\/FBLoginButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 4173,
+      "offset": 4286,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKLoginKit\/FBSDKLoginKit\/FBLoginButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 4249,
+      "offset": 4362,
       "length": 12,
       "value": "1"
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKLoginKit\/FBSDKLoginKit\/FBLoginButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 4418,
+      "offset": 4531,
       "length": 7,
       "value": "2"
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKLoginKit\/FBSDKLoginKit\/FBLoginButton.swift",
       "kind": "FloatLiteral",
-      "offset": 4487,
+      "offset": 4600,
       "length": 4,
       "value": "16.0"
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKLoginKit\/FBSDKLoginKit\/FBLoginButton.swift",
       "kind": "FloatLiteral",
-      "offset": 4524,
+      "offset": 4637,
       "length": 3,
       "value": "6.0"
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKLoginKit\/FBSDKLoginKit\/FBLoginButton.swift",
       "kind": "FloatLiteral",
-      "offset": 4558,
+      "offset": 4671,
       "length": 4,
       "value": "28.0"
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKLoginKit\/FBSDKLoginKit\/FBLoginButton.swift",
       "kind": "FloatLiteral",
-      "offset": 4592,
+      "offset": 4705,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKLoginKit\/FBSDKLoginKit\/FBLoginButton.swift",
       "kind": "FloatLiteral",
-      "offset": 4637,
+      "offset": 4750,
       "length": 3,
       "value": "8.0"
     },
@@ -29386,7 +30667,7 @@
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKLoginKit\/FBSDKLoginKit\/LoginConfiguration.swift",
       "kind": "Array",
-      "offset": 9284,
+      "offset": 16222,
       "length": 2,
       "value": "[]"
     },
@@ -29554,21 +30835,28 @@
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKLoginKit\/FBSDKLoginKit\/LoginManager.swift",
       "kind": "StringLiteral",
-      "offset": 2613,
+      "offset": 2394,
+      "length": 24,
+      "value": "\"native_app_switch_auth\""
+    },
+    {
+      "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKLoginKit\/FBSDKLoginKit\/LoginManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2671,
       "length": 82,
       "value": "\"Unable to find main bundle identifier. Cannot create keychain service identifier\""
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKLoginKit\/FBSDKLoginKit\/LoginManager.swift",
       "kind": "StringLiteral",
-      "offset": 2785,
+      "offset": 2843,
       "length": 51,
       "value": "\"com.facebook.sdk.loginmanager.\""
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKLoginKit\/FBSDKLoginKit\/LoginManager.swift",
       "kind": "StringLiteral",
-      "offset": 2835,
+      "offset": 2893,
       "length": 2,
       "value": "\"\""
     },

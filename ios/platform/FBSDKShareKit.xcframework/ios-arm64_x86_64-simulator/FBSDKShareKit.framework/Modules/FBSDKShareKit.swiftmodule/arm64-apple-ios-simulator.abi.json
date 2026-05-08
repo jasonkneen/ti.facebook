@@ -5384,6 +5384,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "DependentAsType",
             "printedName": "DependentAsType",
             "children": [
@@ -8190,6 +8197,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -15446,6 +15460,230 @@
                 "declKind": "Accessor",
                 "usr": "s:13FBSDKShareKit16ShareLinkContentC10contentURL10Foundation0G0VSgvM",
                 "mangledName": "$s13FBSDKShareKit16ShareLinkContentC10contentURL10Foundation0G0VSgvM",
+                "moduleName": "FBSDKShareKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "entityURI",
+            "printedName": "entityURI",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@FBSDKShareKit@objc(cs)FBSDKShareLinkContent(py)entityURI",
+            "mangledName": "$s13FBSDKShareKit16ShareLinkContentC9entityURISSSgvp",
+            "moduleName": "FBSDKShareKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FBSDKShareKit@objc(cs)FBSDKShareLinkContent(im)entityURI",
+                "mangledName": "$s13FBSDKShareKit16ShareLinkContentC9entityURISSSgvg",
+                "moduleName": "FBSDKShareKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FBSDKShareKit@objc(cs)FBSDKShareLinkContent(im)setEntityURI:",
+                "mangledName": "$s13FBSDKShareKit16ShareLinkContentC9entityURISSSgvs",
+                "moduleName": "FBSDKShareKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13FBSDKShareKit16ShareLinkContentC9entityURISSSgvM",
+                "mangledName": "$s13FBSDKShareKit16ShareLinkContentC9entityURISSSgvM",
+                "moduleName": "FBSDKShareKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isMusicAttachmentAllowed",
+            "printedName": "isMusicAttachmentAllowed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@FBSDKShareKit@objc(cs)FBSDKShareLinkContent(py)isMusicAttachmentAllowed",
+            "mangledName": "$s13FBSDKShareKit16ShareLinkContentC24isMusicAttachmentAllowedSbvp",
+            "moduleName": "FBSDKShareKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FBSDKShareKit@objc(cs)FBSDKShareLinkContent(im)isMusicAttachmentAllowed",
+                "mangledName": "$s13FBSDKShareKit16ShareLinkContentC24isMusicAttachmentAllowedSbvg",
+                "moduleName": "FBSDKShareKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@FBSDKShareKit@objc(cs)FBSDKShareLinkContent(im)setIsMusicAttachmentAllowed:",
+                "mangledName": "$s13FBSDKShareKit16ShareLinkContentC24isMusicAttachmentAllowedSbvs",
+                "moduleName": "FBSDKShareKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13FBSDKShareKit16ShareLinkContentC24isMusicAttachmentAllowedSbvM",
+                "mangledName": "$s13FBSDKShareKit16ShareLinkContentC24isMusicAttachmentAllowedSbvM",
                 "moduleName": "FBSDKShareKit",
                 "implicit": true,
                 "declAttributes": [
@@ -28188,6 +28426,13 @@
                 "printedName": "Sendable",
                 "usr": "s:s8SendableP",
                 "mangledName": "$ss8SendableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "SendableMetatype",
+                "printedName": "SendableMetatype",
+                "usr": "s:s16SendableMetatypeP",
+                "mangledName": "$ss16SendableMetatypeP"
               }
             ]
           },
@@ -28255,6 +28500,8 @@
         "declAttributes": [
           "Available",
           "ObjC",
+          "SynthesizedProtocol",
+          "Sendable",
           "Dynamic"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -28264,6 +28511,13 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
           {
             "kind": "Conformance",
             "name": "Copyable",
@@ -28326,6 +28580,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -28861,6 +29122,13 @@
             "printedName": "_HasCustomAnyHashableRepresentation",
             "usr": "s:s35_HasCustomAnyHashableRepresentationP",
             "mangledName": "$ss35_HasCustomAnyHashableRepresentationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -29283,6 +29551,13 @@
             "printedName": "_HasCustomAnyHashableRepresentation",
             "usr": "s:s35_HasCustomAnyHashableRepresentationP",
             "mangledName": "$ss35_HasCustomAnyHashableRepresentationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -29528,6 +29803,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -30001,49 +30283,49 @@
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKShareKit\/FBSDKShareKit\/UserInterface\/ShareDialog.swift",
       "kind": "BooleanLiteral",
-      "offset": 5831,
+      "offset": 5835,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKShareKit\/FBSDKShareKit\/UserInterface\/ShareDialog.swift",
       "kind": "BooleanLiteral",
-      "offset": 5895,
+      "offset": 5899,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKShareKit\/FBSDKShareKit\/UserInterface\/ShareDialog.swift",
       "kind": "BooleanLiteral",
-      "offset": 5927,
+      "offset": 5931,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKShareKit\/FBSDKShareKit\/UserInterface\/ShareDialog.swift",
       "kind": "Array",
-      "offset": 22557,
+      "offset": 22585,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKShareKit\/FBSDKShareKit\/UserInterface\/ShareDialog.swift",
       "kind": "StringLiteral",
-      "offset": 31584,
+      "offset": 31612,
       "length": 8,
       "value": "\"app_id\""
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKShareKit\/FBSDKShareKit\/UserInterface\/ShareDialog.swift",
       "kind": "StringLiteral",
-      "offset": 31652,
+      "offset": 31680,
       "length": 10,
       "value": "\"hashtags\""
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKShareKit\/FBSDKShareKit\/UserInterface\/ShareDialog.swift",
       "kind": "StringLiteral",
-      "offset": 31723,
+      "offset": 31751,
       "length": 8,
       "value": "\"quotes\""
     },
@@ -30125,6 +30407,13 @@
       "value": "203"
     },
     {
+      "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKShareKit\/FBSDKShareKit\/Content\/ShareLinkContent.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1048,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKShareKit\/FBSDKShareKit\/Content\/SharePhoto.swift",
       "kind": "BooleanLiteral",
       "offset": 3009,
@@ -30134,16 +30423,16 @@
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKShareKit\/FBSDKShareKit\/Content\/SharePhotoContent.swift",
       "kind": "IntegerLiteral",
-      "offset": 3474,
+      "offset": 3501,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKShareKit\/FBSDKShareKit\/Content\/SharePhotoContent.swift",
       "kind": "IntegerLiteral",
-      "offset": 3480,
-      "length": 1,
-      "value": "6"
+      "offset": 3507,
+      "length": 2,
+      "value": "10"
     },
     {
       "filePath": "\/data\/sandcastle\/boxes\/trunk-git-facebook-ios-sdk\/FBSDKShareKit\/FBSDKShareKit\/UserInterface\/SocialComposeViewControllerFactory.swift",

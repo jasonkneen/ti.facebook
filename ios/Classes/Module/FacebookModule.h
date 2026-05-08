@@ -177,6 +177,44 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSNumber *)loginTracking;
 
 /*!
+ @brief Sets the advertiser tracking flag on the Facebook SDK.
+
+ When `false` (the SDK default until App Tracking Transparency is granted), the SDK
+ silently shims `LOGIN_TRACKING_ENABLED` (classic) login attempts into the
+ Limited Login flow. Set this to `true` after a successful ATT prompt to keep
+ classic login behaviour and continue receiving an Access Token rather than
+ an Authentication Token.
+
+ iOS only. Has no effect on Android.
+
+ @param enabled Whether the SDK may treat the user as opted-in to ad tracking.
+
+ @code
+ const fb = require('facebook');
+
+ // After the user grants ATT in your app:
+ fb.advertiserTrackingEnabled = true;
+ fb.authorize();
+ @endcode
+ */
+- (void)setAdvertiserTrackingEnabled_:(NSNumber *_Nonnull)enabled;
+
+/*!
+ @brief Gets whether the Facebook SDK currently considers ad tracking enabled.
+
+ iOS only.
+
+ @code
+ const fb = require('facebook');
+
+ console.warn(fb.advertiserTrackingEnabled);
+ @endcode
+
+ @return BOOL Whether ad tracking is enabled in the SDK.
+ */
+- (NSNumber *)advertiserTrackingEnabled;
+
+/*!
  @brief Returns the expiration date.
  
  @code
