@@ -16,6 +16,7 @@ The Facebook module is used for connecting your application with Facebook. This 
 - **Minimum iOS deployment target raised to 15.0** (was 12.0). Consumers must target iOS 15+ in their `tiapp.xml` / `Info.plist`.
 - **Minimum Titanium SDK raised to 13.0.0** (was 11.0.0). The module now links against Ti 13.x's `TitaniumKit.xcframework`; older Titanium SDKs are no longer supported.
 - Underlying Facebook iOS SDK bumped from 17.4.0 to 18.0.3 (additive: improved StoreKit / IAP event support, fast-app-switching reintroduced, deferred-deeplink improvements). Upstream changelog: https://github.com/facebook/facebook-ios-sdk/blob/main/CHANGELOG.md
+- **Limited-login auto-shim**: starting with the Facebook iOS SDK v18, a `LOGIN_TRACKING_ENABLED` (classic) login attempt is silently shimmed into the Limited Login flow whenever `FBSDKSettings.isAdvertiserTrackingEnabled` is `false` (the SDK default until ATT has been granted). To keep classic login behaviour, prompt the user via `ATTrackingManager.requestTrackingAuthorization` and then set the new `Modules.Facebook.advertiserTrackingEnabled = true` flag before calling `authorize()`. Android is unaffected.
 
 ### v15.0.0 (Android) — Facebook Android SDK 18.2.3
 

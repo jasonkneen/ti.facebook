@@ -1041,6 +1041,26 @@ properties:
     since: "10.0.0"
     platforms: [iphone, ipad]
 
+  - name: advertiserTrackingEnabled
+    summary: Gets or sets the SDK's advertiser-tracking flag.
+    description: |
+        Maps to `FBSDKSettings.sharedSettings.isAdvertiserTrackingEnabled`.
+
+        Starting with the Facebook iOS SDK v18, a `LOGIN_TRACKING_ENABLED` (classic)
+        login attempt is silently shimmed into the Limited Login flow whenever this
+        flag is `false` (the SDK default until App Tracking Transparency has been
+        granted). Set this to `true` after a successful
+        [ATTrackingManager.requestTrackingAuthorization](https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/requesttrackingauthorization(completionhandler:))
+        in your app to keep classic login behaviour and continue receiving an
+        Access Token rather than an Authentication Token.
+
+        See https://developers.facebook.com/docs/facebook-login/ios/limited-login/
+        for the difference between classic and Limited Login.
+    type: Boolean
+    default: false
+    since: "16.0.0"
+    platforms: [iphone, ipad]
+
   - name: LOGIN_TRACKING_ENABLED
     summary: |
         Use with [LoginButton.loginTracking](Modules.Facebook.LoginButton.loginTracking) or the top-level

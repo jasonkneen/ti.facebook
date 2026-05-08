@@ -155,6 +155,16 @@ NS_ASSUME_NONNULL_BEGIN
   return @([TiUtils intValue:_loginTracking def:FBSDKLoginTrackingEnabled]);
 }
 
+- (void)setAdvertiserTrackingEnabled_:(NSNumber *_Nonnull)enabled
+{
+  FBSDKSettings.sharedSettings.isAdvertiserTrackingEnabled = [TiUtils boolValue:enabled];
+}
+
+- (NSNumber *)advertiserTrackingEnabled
+{
+  return @(FBSDKSettings.sharedSettings.isAdvertiserTrackingEnabled);
+}
+
 - (NSDate *_Nullable)expirationDate
 {
   __block NSDate *expirationDate = nil;
